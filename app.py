@@ -1,15 +1,64 @@
 import streamlit as st
 import os
 from dotenv import load_dotenv
-from agents.frontend_agent import frontend_agent
-from agents.backend_agent import backend_agent
-from agents.frontend_docker_agent import frontend_docker_agent
-from agents.backend_docker_agent import backend_docker_agent
+from agno.agent import Agent
+from agno.models.google import Gemini
 
 # Load API Key
 load_dotenv()
 API_KEY = os.getenv("GOOGLE_API_KEY")
 
+# Define Backend Agent
+backend_agent = Agent(
+    name="Backend Agent",
+    role="Generate professional backend code.",
+    model=Gemini(id="gemini-1.5-flash", api_key=API_KEY),
+    instructions=[
+        "Decide the best backend language/framework based on requirements.",
+        "Generate professional-level code in Node.js, Django, Flask, FastAPI, Spring Boot, Laravel, CodeIgniter, Ruby on Rails, ASP.NET Core, Go, Rust, or Kotlin.",
+        "Ensure scalability, security, and clean architecture.",
+    ],
+    markdown=True,
+)
+
+# Define Backend Docker Agent
+backend_docker_agent = Agent(
+    name="Backend Docker Agent",
+    role="Generate Dockerfile for the backend.",
+    model=Gemini(id="gemini-1.5-flash", api_key=API_KEY),
+    instructions=[
+        "Generate an optimized Dockerfile for the backend.",
+        "Ensure best practices like small image size and environment variable security.",
+    ],
+    markdown=True,
+)
+
+# Define Frontend Agent
+frontend_agent = Agent(
+    name="Frontend Agent",
+    role="Generate professional frontend code.",
+    model=Gemini(id="gemini-1.5-flash", api_key=API_KEY),
+    instructions=[
+        "Decide the best frontend language/framework based on requirements.",
+        "Generate professional-level code in HTML, CSS, JavaScript, TypeScript, React, Vue, Angular, or Svelte.",
+        "Ensure clean, maintainable, and well-documented code.",
+    ],
+    markdown=True,
+)
+
+# Define Frontend Docker Agent
+frontend_docker_agent = Agent(
+    name="Frontend Docker Agent",
+    role="Generate Dockerfile for the frontend.",
+    model=Gemini(id="gemini-1.5-flash", api_key=API_KEY),
+    instructions=[
+        "Generate an optimized Dockerfile for the frontend.",
+        "Ensure best practices like multi-stage builds if necessary.",
+    ],
+    markdown=True,
+)
+
+# Streamlit UI
 st.title("Multi-Agent AI Code Generator 🚀")
 st.subheader("Generate Full-Stack Code and Dockerfiles Using AI Agents")
 
