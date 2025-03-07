@@ -3,3 +3,4 @@ agno
 google
 google-generativeai
 python-dotenv
+openai
