@@ -5,11 +5,15 @@ An AI-powered multi-agent system that generates professional frontend and backen
 
 ## 🛠️ Features
 
-✅ AI-generated backend code (Node.js, Django, Flask, FastAPI, Spring Boot, Laravel, etc.)
-✅ AI-generated frontend code (React, Vue, Angular, Svelte, HTML, CSS, JavaScript, TypeScript)
-✅ AI-generated Dockerfiles for both frontend and backend
+✅ AI-generated backend code (Node.js, Django, Flask, FastAPI, Spring Boot, Laravel, etc.) 
+
+✅ AI-generated frontend code (React, Vue, Angular, Svelte, HTML, CSS, JavaScript, TypeScript) 
+
+✅ AI-generated Dockerfiles for both frontend and backend 
+
 ✅ Ensures scalability, security, and clean architecture
-✅ Streamlit UI for an interactive experience
+
+✅ Streamlit UI for an interactive experience 
 
 ## 📂 Project Structure
 
@@ -68,8 +72,11 @@ Deploy and share your app link.
 ## 📌 Example Usage
 
 1️⃣ Open the Streamlit UI.
+
 2️⃣ Enter your project requirements.
+
 3️⃣ Click **Generate Code**.
+
 4️⃣ View the AI-generated frontend & backend code along with Dockerfiles.
 
 ## 🔧 Troubleshooting
@@ -89,7 +96,9 @@ This project is open-source under the MIT License.
 ## 📩 Contact & Contributions
 
 🔹 Feel free to fork this repo & contribute!
+
 🔹 Found a bug? Create an issue on GitHub.
+
 🔹 Questions? Reach out via email: venkatsaimacha123@gmail.com
 
 🚀 Built with ❤️ using Streamlit & Gemini AI 🚀
